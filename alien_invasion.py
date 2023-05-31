@@ -20,7 +20,7 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-        # 每次循环都会重新绘制屏幕
+        # 每次循环都会重绘屏幕
         screen.fill(ai_settings.bg_color)
 
         # 让最近绘制的屏幕可见
