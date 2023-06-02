@@ -19,6 +19,7 @@ def check_play_button(ai_settings, screen, stats, sb, play_button, ship, aliens,
         sb.prep_score()
         sb.prep_high_score()
         sb.prep_level()
+        sb.prep_ships()
         aliens.empty()
         bullets.empty()
 
@@ -171,6 +172,7 @@ def ship_hit(ai_settings, stats, screen, ship, aliens, bullets, sb):
 
     if stats.ships_left > 0:
         stats.ships_left -= 1
+        sb.prep_ships()
         aliens.empty()
         bullets.empty()
         create_fleet(ai_settings, screen, ship, aliens)
